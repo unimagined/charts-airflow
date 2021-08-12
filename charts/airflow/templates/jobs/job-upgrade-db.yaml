@@ -30,6 +30,10 @@ spec:
       imagePullSecrets:
         - name: {{ .Values.airflow.image.pullSecret }}
       {{- end }}
+      {{- if .Values.jobs.nodeSelector }}
+      nodeSelector:
+        {{- toYaml .Values.jobs.nodeSelector | nindent 8 }}
+      {{- end }}
       serviceAccountName: {{ include "airflow.serviceAccountName" . }}
       initContainers:
         {{- if $extraPipPackages }}
