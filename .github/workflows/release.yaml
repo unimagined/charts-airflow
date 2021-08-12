@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - 8.4.1
     paths:
       - charts/*/Chart.yaml
 
