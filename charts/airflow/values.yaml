@@ -1690,11 +1690,3 @@ prometheusRule:
   ## - documentation: https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/
   ##
   groups: []
-
-jobs:
-  ## the nodeSelector configs for the jobs Pods
-  ##
-  ## DOCS:
-  ##   https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector
-  ##
-  nodeSelector: {}
